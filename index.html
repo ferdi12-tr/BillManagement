@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/library.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>3FBAY</title>
+</head>
+
+<body class="fo-fa-montserrat">
+    <div id="popUpOverlay">
+        <div class="overlay">mhb</div>
+        <div class="pop-up row text-center">
+            <div class="amount col-6">
+                <i id="btnAmount" class="fa-solid fa-wallet"></i>
+            </div>
+            <div class="bill col-6">
+                <i id="btnBill" class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+        </div>
+    </div>
+
+    <header class="header pe-5 ps-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div style="width: 40px; height: 40px" class="col-6 logo-elem flex-align-center">
+                    <a href="index.html"><img class="img-fluid" src="assets/images/950320.png" alt="" /></a>
+                </div>
+                <div class="col-6 flex-align-center d-flex-end" id="navButtonGroup">
+                    <div id="navbarBtnBill" class="btn btn-red me-2">
+                        Fatura İşlemleri
+                    </div>
+                    <div id="navbarAmount" class="btn btn-red me-2"></div>
+                    <div class="btn btn-light" id="logOut">Çıkış Yap</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="content mt-5">
+        <div class="container">
+            <div class="row">
+                <div id="sectionAmount" class="col-12 p-5 amount-add tc-white">
+                    <h1 class="tc-dark">Merhaba <span id="nameOfAmount"></span></h1>
+                    <p>
+                        Buradan bakiye bilgilerinize erişebilir ve bakiye yükleme işlemini
+                        gerçekleştirebilirsiniz.
+                    </p>
+                    <h4>
+                        Güncel Bakiyeniz:
+                        <span id="wallet">0</span>
+                    </h4>
+                    <h3>Bakiye Yükle</h3>
+                    <label for="creditCard">Kart Numaranız:</label><br />
+                    <input type="text" id="creditCard" class="input-control" /><br />
+                    <label for="inputWallet">Yüklemek istediğiniz bakiye:</label><br />
+                    <input id="inputWallet" type="number" class="input-control" /><br />
+                    <div id="addWallet" class="btn btn-secondary">Bakiye Yükle</div>
+                </div>
+                <div id="sectionBill" class="col-12">
+                    <div class="row">
+                        <div class="col-4 content-left-side">
+                            <div class="row" id="toggleRegister">
+                                <div class="col-12 mb-4 sign-in">
+                                    <div class="card p-2">
+                                        <h1 class="text-center">Giriş Yap</h1>
+                                        <label for="SignInUserName">Kullanıcı Adı</label>
+                                        <input type="text" id="SignInUserName" class="input-control"
+                                            placeholder="Kullanıcı Adını Giriniz" />
+                                        <label for="SignInUserPassword">Şifre</label>
+                                        <input type="password" id="SignInUserPassword" class="input-control"
+                                            placeholder="Şifre Giriniz" />
+                                        <div class="warning tc-red" id="loginMessage" style="display: none">
+                                            Hatalı kullanıcı adı veya şifre
+                                        </div>
+                                        <div class="text-center mt-2">
+                                            <div class="btn btn-red" id="signIn">Giriş Yap</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 sign-up">
+                                    <div class="card p-2">
+                                        <h1 class="text-center">Üye Ol</h1>
+                                        <label for="signUpUserName">Kullanıcı Adı</label>
+                                        <input type="text" id="signUpUserName" class="input-control"
+                                            placeholder="Kullanıcı Adını Giriniz" />
+                                        <label for="signUpUserPassword">Şifre</label>
+                                        <input type="password" id="signUpUserPassword" class="input-control"
+                                            placeholder="Şifre Giriniz" />
+                                        <div class="text-center mt-2">
+                                            <div class="btn btn-light" id="signUp">Kayıt Ol</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="toggleBill" style="display: none">
+                                <div class="card p-2">
+                                    <h1 class="text-center">Fatura Ekle</h1>
+                                    <label for="billType">Fatura Türü</label>
+                                    <select style="width: 100%" class="input-control" id="billType">
+                                        <option value="Elektrik">Elektrik</option>
+                                        <option value="Su">Su</option>
+                                        <option value="Doğalgaz">Doğalgaz</option>
+                                        <option value="İnternet">İnternet</option>
+                                        <option value="Telefon">Telefon</option>
+                                    </select>
+                                    <label for="billName">Fatura Adı</label>
+                                    <input type="text" id="billName" class="input-control"
+                                        placeholder="Fatura Adını Giriniz" />
+
+                                    <label for="billDate">Fatura Tarihi</label>
+                                    <input type="date" id="billDate" class="input-control" />
+
+                                    <label for="billCost">Fatura Tutarı</label>
+                                    <input type="number" min="0" id="billCost" class="input-control"
+                                        placeholder="Fatura Tutarı" />
+
+                                    <div class="row card-submit">
+                                        <div class="col-6 flex-align-center">
+                                            <label class="me-1" for="isPaid">Ödendi mi?</label>
+                                            <input type="checkbox" name="" id="isPaid" />
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="btn btn-red" id="billBtn">Fatura Ekle</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 ms-5 content-right-side p-5">
+                            <select id="isPaidFilter" class="input-control">
+                                <option value="Hepsi">Hepsi</option>
+                                <option value="Ödenmiş Faturalar">Ödenmiş Faturalar</option>
+                                <option value="Ödenmemiş Faturalar">Ödenmemiş Faturalar</option>
+                            </select>
+                            <div class="table-responsive">
+                                <table class="table table-hovered table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>
+                                                Fatura <br />
+                                                Türü
+                                            </th>
+                                            <th>
+                                                Fatura <br />
+                                                Adı
+                                            </th>
+                                            <th>
+                                                Fatura <br />
+                                                Tarihi
+                                            </th>
+                                            <th>
+                                                Fatura <br />
+                                                Tutarı
+                                            </th>
+                                            <th>Ödendi mi?</th>
+                                            <th colspan="3">Ayarlar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="billTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

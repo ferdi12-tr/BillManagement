@@ -1,0 +1,186 @@
+.text-center {
+  text-align: center;
+}
+
+.d-flex-end {
+  display: flex;
+  justify-content: end;
+}
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+}
+.d-flex-start {
+  display: flex;
+  justify-content: start;
+}
+
+.header {
+  padding: 16px 60px;
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.card {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-right-side {
+  background-color: rgba(255, 0, 0, 0.8);
+  border-radius: 16px;
+}
+
+.sign-up {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: #fff;
+}
+
+.btn-red {
+  background-color: rgba(255, 0, 0, 0.8);
+  box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.2);
+  border: none;
+  color: #ddd;
+}
+
+.btn-red:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.btn-light {
+  background-color: rgb(225, 225, 225);
+  color: #000;
+}
+
+.btn-light:hover {
+  background-color: rgb(41, 41, 41);
+  border: 0;
+  color: #ddd;
+}
+.btn-settings {
+  padding: 0% !important;
+  margin: 0 !important;
+}
+.btn-settings .btn {
+  padding: 6px;
+  background-color: rgba(114, 10, 10, 0.973);
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 1px 1px 6px rgba(225, 225, 225, 0.3);
+  transition: all 300ms;
+}
+.btn-settings:hover .btn {
+  background-color: rgb(225, 225, 225);
+}
+.btn-settings .btn .btn-icon {
+  font-size: 16px;
+  background-color: transparent;
+}
+.btn-settings .btn-edit .btn-icon {
+  color: var(--info) !important;
+}
+.btn-settings .btn-delete .btn-icon {
+  color: var(--red) !important;
+}
+.btn-settings .btn-pay .btn-icon {
+  color: var(--green) !important;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+/* Pop-Up Display Css */
+
+#popUpOverlay {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+}
+
+.pop-up {
+  border-radius: 30px;
+  overflow: hidden;
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  background-color: #fff;
+  z-index: 21;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(+50%, -50%);
+}
+
+.amount {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.bill {
+  background-color: rgb(203, 203, 203);
+}
+
+.pop-up div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-file-invoice-dollar {
+  cursor: pointer;
+  width: 100px;
+  padding: 40px;
+  border-radius: 50%;
+  background-color: rgba(146, 0, 0, 0.8);
+  font-size: 100px;
+  color: #fff;
+}
+
+.fa-wallet {
+  width: 100px;
+  padding: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 100px;
+  color: rgba(146, 0, 0, 0.8);
+}
+
+.fa-file-invoice-dollar:hover {
+  background-color: rgba(111, 0, 0, 0.8);
+  box-shadow: 4px 4px 20px #000000;
+}
+
+.fa-wallet:hover {
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 4px 4px 20px #000000;
+}
+
+.amount-add {
+  background-color: rgba(255, 0, 0, 0.8);
+  display: none;
+}
+
+.amount-add input {
+  width: 30%;
+}
+.bg-table {
+  background-color: rgb(110, 4, 4) !important;
+}
